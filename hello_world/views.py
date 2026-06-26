@@ -4,7 +4,7 @@ from hello_world import app
 from hello_world.formater import PLAIN, SUPPORTED, get_formatted
 
 moje_imie = "Jakub"
-msg = "Hello World!"
+mgs = "Hello World!"
 
 
 @app.route('/')
