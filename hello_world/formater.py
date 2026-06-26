@@ -1,4 +1,3 @@
-
 PLAIN = "plain"
 PLAIN_UP = "plain_uppercase"
 PLAIN_LO = "plain_lowercase"
@@ -21,8 +20,7 @@ def get_formatted(msg, imie, format):
 
 
 def format_to_json(msg, imie):
-    return ('{ "imie":"' + imie + '", "msg":"' +
-            msg + '"}')
+    return '{ "imie":"%s", "msg":"%s"}' % (imie, msg)
 
 
 def plain_text(msg, imie):
@@ -30,8 +28,9 @@ def plain_text(msg, imie):
 
 
 def plain_text_upper_case(msg, imie):
-    return plain_text(msg.upper(), imie.upper())
+    return (imie + ' ' + msg).upper()
 
 
 def plain_text_lower_case(msg, imie):
-    return plain_text(msg.lower(), imie.lower())
+
+    return (imie + ' ' + msg).lower()
