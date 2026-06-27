@@ -84,3 +84,38 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   $ yum install -y docker-ce
   $ systemctl start docker
   ```
+
+# Docker
+
+Budowanie obrazu:
+
+```bash
+make docker_build
+```
+
+Uruchamianie kontenera:
+
+```bash
+make docker_run
+```
+
+Publikacja obrazu na Docker Hub:
+
+```bash
+make docker_push
+```
+
+# Continuous Integration i Continuous Delivery
+
+Projekt wykorzystuje CircleCI do:
+
+* instalacji zależności (`make deps`),
+* uruchamiania lintera (`make lint`),
+* wykonywania testów (`make test`),
+* budowania obrazu Docker (`make docker_build`),
+* publikowania obrazu do Docker Hub (`make docker_push`).
+
+# Format Markdown
+
+Markdown (MD) jest lekkim językiem znaczników służącym do tworzenia dokumentacji i formatowania tekstu. Pliki README w projektach Git są najczęściej zapisywane właśnie w formacie Markdown.
+
